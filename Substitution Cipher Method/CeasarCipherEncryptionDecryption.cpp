@@ -47,7 +47,4 @@ int main()
 	cin >> key;
 	cout<<"Encrypted Message:"<< Encryption(message , key)<<endl;
 	cout<<"Decrypted Message:"<< Decryption(message, key);
-	
-	
-	
 }
