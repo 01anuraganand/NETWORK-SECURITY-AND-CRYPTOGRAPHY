@@ -12,6 +12,12 @@ char *Encryption(char message[], int key)
 			if(ch > 'z')
 				ch = ch - 'z' + 'a' - 1;
 		}
+		else if (ch >= 'A' && ch <= 'Z')
+		{
+			ch += key;
+			if(ch>'Z')
+				ch = ch - 'Z' + 'A' -1;
+		}
 		message[i] = ch;
 	}
 	return message;
@@ -27,6 +33,12 @@ char *Decryption(char message[], int key)
 			ch -= key;
 			if(ch < 'a')
 				ch = ch + 'z' - 'a' + 1;
+		}
+		else if(ch >='A' && ch <='Z')
+		{
+			ch -= key;
+			if(ch<'A')
+				ch = ch +'Z' -'A' +1;
 		}
 		message[i] = ch;
 	}
