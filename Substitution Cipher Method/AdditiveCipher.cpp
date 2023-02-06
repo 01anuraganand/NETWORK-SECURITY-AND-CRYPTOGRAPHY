@@ -12,7 +12,6 @@ char *Encryption(char plainText[], int key, char alphabet[],int mapIndex[])
 		int additive = (int(plainText[i]) + key)%26;
 		for(int j = 0; j<26; j++)
 			{
-				
 				if(additive == mapIndex[j])
 					encryptedText[i] = alphabet[j];
 			}
@@ -30,7 +29,6 @@ char *Decryption(char encryptedText[], int key, char alphabet[],int mapIndex[])
 		int additive = (int(encryptedText[i]) - key)%26;
 		for(int j = 0; j<26; j++)
 			{
-				
 				if(additive == mapIndex[j])
 					decryptedText[i] = alphabet[j];
 			}
@@ -66,5 +64,4 @@ int main()
 	
 	char * decryptedText = Decryption(encryptedText, key, alphabet, mapIndex);
 	cout<<"Decrypted Text:"<<decryptedText<<endl;
-	
 }
