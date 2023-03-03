@@ -77,13 +77,13 @@ string Encrypt(string plainText, vector<vector<char>> &key5x5)
 	for(int i = 0; i<plainText.size()-1; i += 2)
 	{
 		if(plainText[i] == plainText[i+1])
-			plainText[i+1] = 'X';
+			plainText.insert(i+1, "X");
 	}
-	cout<<plainText<<endl;
+	
 	
 	if(plainText.size() % 2 != 0)
 		plainText += 'Z';
-	
+	cout<<plainText<<endl;
 	string cipherText;
 	for(int i = 0; i<plainText.size(); i+=2)
 	{
@@ -127,7 +127,7 @@ string Encrypt(string plainText, vector<vector<char>> &key5x5)
 
 int main()
 {
-	string plainText = "insstrument";//"instr uments";
+	string plainText = "insstrumen";//"instr uments";
 	string key = "Monarchy";
 	
 	//toUpperCase(plainText);
