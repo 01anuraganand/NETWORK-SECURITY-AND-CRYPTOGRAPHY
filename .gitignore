@@ -2,3 +2,4 @@
 *.exe
 runtime.cpp
 ClassPractical
+*.ipynb_checkpoints
